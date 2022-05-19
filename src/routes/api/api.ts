@@ -1,12 +1,12 @@
-import express, { application } from 'express';
+import express from 'express';
 import images from './images';
 
 const api = express.Router();
 
-api.get('/',(req,res)=>{
+api.get('/', (req, res) => {
   res.send('Hello from api');
-})
+});
 
-api.use('/images',images)
+api.use('/images', images);
 
-export default api
+export default api;
