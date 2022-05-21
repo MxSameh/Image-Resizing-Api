@@ -5,6 +5,6 @@ const port = 3200;
 
 app.use('/', root);
 
-app.listen(port, ():void => {
+app.listen(port, (): void => {
   console.log(`server started on port ${port}`);
 });

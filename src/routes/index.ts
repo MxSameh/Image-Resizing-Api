@@ -3,7 +3,7 @@ import api from './api/api';
 
 const root = express.Router();
 
-root.get('/', (req, res) => {
+root.get('/', (req: express.Request, res: express.Response): void => {
   res.send('Hello from the /');
 });
 

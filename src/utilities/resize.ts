@@ -6,7 +6,11 @@ const imagesPath = path.normalize(__dirname + '../../../assets');
 
 // RESIZING FUNCTION
 //
-const resize = (filename: string, width: number, height: number) => {
+const resize = (
+  filename: string,
+  width: number,
+  height: number
+): Promise<string> => {
   const originalImage = `${imagesPath}/full/${filename}.jpg`;
   const outputImage = `${imagesPath}/thumb/${filename}${width}x${height}_thumb.jpg`;
 

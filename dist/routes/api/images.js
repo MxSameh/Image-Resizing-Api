@@ -7,8 +7,15 @@ const express_1 = __importDefault(require("express"));
 const resize_1 = __importDefault(require("../../utilities/resize"));
 const images = express_1.default.Router();
 images.get('/', (req, res) => {
-    const { filename, width, height } = req.query;
-    (0, resize_1.default)(filename, parseInt(width), parseInt(height))
+    const filename = req.query.filename;
+    const width = parseInt(req.query.width);
+    const height = parseInt(req.query.height);
+    // { filename, width, height } = req.query;
+    if (width <= 0 || height <= 0 || !filename || !width || !height) {
+        res.send('Make sure URL parameters (filename, width, height) are given a value');
+        return;
+    }
+    (0, resize_1.default)(filename, width, height)
         .then((image) => {
         res.sendFile(image);
     })
