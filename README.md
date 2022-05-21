@@ -2,8 +2,8 @@
 Devloped by : Mohamed Sameh
 ---
 ## How API this API works
->localhost:3000/api/images?filename=**image name**&width=**your width**&height=**your height**
-<br>Ex: http://localhost:3000/api/images?filename=fjord&width=200&height=200
+>localhost:3200/api/images?filename=**image name**&width=**your width**&height=**your height**
+<br>Ex: http://localhost:3200/api/images?filename=fjord&width=200&height=200
 <br>This will return fjord image with size of 200x200
 <br>NOTE: You can only use images from the assets/full directory otherwise ther will be an error
 <br> you can use your own photos be adding them to the assets/full folder
@@ -27,10 +27,10 @@ This API can be used in two different ways :
   npm run start
   ```
   
-  This will start your server on locahost:3000
+  This will start your server on locahost:3200
 ---
 ## Scripts
-1. start : Starts the server on localhost:3000
+1. start : Starts the server on localhost:3200
 1. prettier : Fix the code styles to the default priettier styles
 1. eslint-check : Check if there is any errors in the code before compiling 
 1. eslint-fix : Fix any errors found if there is any
