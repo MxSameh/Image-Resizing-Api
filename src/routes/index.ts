@@ -4,7 +4,7 @@ import api from './api/api';
 const root = express.Router();
 
 root.get('/', (req: express.Request, res: express.Response): void => {
-  res.send('Hello from the /');
+  res.send('WELCOME TO MY PROJECT');
 });
 
 root.use('/api', api);

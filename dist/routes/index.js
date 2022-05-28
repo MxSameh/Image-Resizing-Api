@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const api_1 = __importDefault(require("./api/api"));
 const root = express_1.default.Router();
 root.get('/', (req, res) => {
-    res.send('Hello from the /');
+    res.send('WELCOME TO MY PROJECT');
 });
 root.use('/api', api_1.default);
 exports.default = root;

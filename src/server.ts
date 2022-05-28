@@ -8,3 +8,5 @@ app.use('/', root);
 app.listen(port, (): void => {
   console.log(`server started on port ${port}`);
 });
+
+export default app;
