@@ -9,9 +9,11 @@ images.get('/', (req: express.Request, res: express.Response): void => {
   // { filename, width, height } = req.query;
 
   if (width <= 0 || height <= 0 || !filename || !width || !height) {
-    res.send(
-      'Make sure URL parameters (filename, width, height) are given a value'
-    );
+    res
+      .status(404)
+      .send(
+        'Make sure URL parameters (filename, width, height) are given a value'
+      );
     return;
   }
 
@@ -20,7 +22,7 @@ images.get('/', (req: express.Request, res: express.Response): void => {
       res.sendFile(image as string);
     })
     .catch((err) => {
-      res.send(err);
+      res.status(404).send(err);
     });
 });
 
